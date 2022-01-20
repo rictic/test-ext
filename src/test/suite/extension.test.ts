@@ -22,7 +22,7 @@ suite('Extension Test Suite', () => {
 		await vscode.window.showTextDocument(doc);
 		// get all diagnostics
 		let diagnostics = (await vscode.languages.getDiagnostics()).flatMap(([_, d]) => d);
-		assert.deepStrictEqual(diagnostics.map(d => d.message), ['This is a test error message']);
+		assert.deepStrictEqual(diagnostics.map(d => d.message), ['This is a test erro message']);
 
 		// remove the word 'error' from the document and get diagnostics again
 		const editResult = await vscode.window.activeTextEditor!.edit(edit => {
